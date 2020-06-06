@@ -1,0 +1,335 @@
+/* ******************************************************* START Test Assigment Styles */
+/* general styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 90%;
+  font-family: "Work Sans", sans-serif;
+  box-sizing: border-box;
+  letter-spacing: 0.05rem;
+  position: relative;
+}
+h1 {
+  font-weight: 500;
+}
+p {
+  font-weight: 300;
+}
+a {
+  font-weight: 100;
+  text-decoration: none;
+  color: #fff;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+/* main container styles */
+.container {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(221, 221, 221, 1) 100%
+  );
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+.skewed {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  clip-path: polygon(0 95%, 100% 50%, 100% 100%, 0% 100%);
+  width: 100%;
+  height: 40%;
+}
+/* inner container stlyes */
+.inner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 97vh;
+}
+/* text styles */
+.text-container {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20%;
+  position: relative;
+  margin-bottom: 50px;
+}
+.text-container p {
+  padding: 0.5rem 0;
+}
+/* image styles */
+.img-container {
+  width: 90%;
+  align-self: flex-end;
+  margin: 0 auto;
+  position: relative;
+}
+
+.img-container img {
+  position: relative;
+  border-radius: 1rem;
+  z-index: 1;
+  box-shadow: 0px 5px 20px 0px rgba(51, 51, 51, 0.3);
+}
+.img-container::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 99.3%;
+  background-color: rgba(255, 255, 255, 0.4);
+  z-index: 2;
+  opacity: 0;
+  border-radius: 1rem;
+}
+.img-container:hover:before {
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+/* button styles */
+.btn {
+  display: inline-block;
+  background-color: #dc143c;
+  padding: 0.5rem 2.5rem;
+  color: rgba(255, 255, 255, 0.8);
+  border-radius: 3rem;
+  z-index: 999;
+}
+.btn:hover {
+  background-color: #000;
+  transition: all 0.3s ease-in-out;
+}
+
+/* medium screen styles */
+@media screen and (min-width: 768px) {
+  .container {
+    min-height: 70%;
+  }
+  .inner-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: 70vh;
+    width: 95%;
+    margin: 0 auto 1%;
+  }
+  .text-container {
+    align-self: flex-end;
+    margin-bottom: 10%;
+    padding-right: 5%;
+    margin-top: initial;
+    font-size: 0.7rem;
+  }
+}
+/* large screen stlyes */
+@media screen and (min-width: 992px) {
+  .container {
+    min-height: 90%;
+  }
+  .inner-container {
+    min-height: 90vh;
+    width: 90%;
+  }
+  .text-container {
+    padding-right: 10%;
+  }
+  .text-container p {
+    padding: 1rem 0;
+  }
+}
+/* x-large screen stlyes */
+@media screen and (min-width: 1200px) {
+  .container {
+    min-height: 95%;
+  }
+  .inner-container {
+    min-height: 95vh;
+    width: 90%;
+  }
+  .text-container {
+    font-size: 0.9rem;
+    padding-right: 10%;
+  }
+  .btn {
+    padding: 1rem 3.5rem;
+  }
+}
+/* ******************************************************* END Test Assigment Styles */
+/* general container */
+.cont {
+  width: 90%;
+  margin: 50px auto;
+  position: relative;
+  z-index: 100;
+}
+/* about */
+.about-container span {
+  color: #dc143c;
+}
+/* button */
+.custom-btn {
+  position: relative;
+  display: inline-block;
+  border: 1px solid #dc143c;
+  padding: 0.3rem 2rem;
+  border-radius: 3rem;
+}
+.custom-btn a {
+  font-size: 0.9rem;
+  color: #000;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+.custom-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 101%;
+  background-color: #dc143c;
+  border-radius: 3rem;
+  margin: 0;
+  padding: 0;
+  z-index: -1;
+}
+.custom-btn:hover::before {
+  width: 101%;
+  transition: all 0.3s ease-in-out;
+}
+.custom-btn:hover a {
+  color: #fff;
+  transition: all 0.35s ease-in-out;
+}
+@media screen and (min-width: 768px) {
+  .cont {
+    width: 80%;
+  }
+  .custom-btn {
+    padding: 0.5rem 2.5rem;
+  }
+}
+/* services */
+.skewed-container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(to top, #8e9eab, #eef2f3);
+  position: relative;
+  z-index: 1;
+}
+.skewed-container::before {
+  position: absolute;
+  content: "";
+  top: -7.5%;
+  left: 0;
+  width: 100%;
+  height: 15%;
+  background-color: #fff;
+  z-index: 2;
+  transform: skewY(3deg);
+}
+.skewed-container::after {
+  position: absolute;
+  content: "";
+  bottom: -7.5%;
+  left: 0;
+  width: 100%;
+  height: 15%;
+  background-color: #fff;
+  z-index: 2;
+  transform: skewY(3deg);
+}
+
+.services-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 200px 0;
+}
+.services {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+}
+.service {
+  width: 100%;
+  background: linear-gradient(to top, #ada996, #f2f2f2, #dbdbdb, #eaeaea);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px 0;
+  padding: 1rem 0;
+}
+.service span {
+  color: #dc143c;
+}
+.service p {
+  padding: 0 1rem;
+}
+.another-btn {
+  color: #dc143c;
+  display: inline-block;
+}
+.another-btn a {
+  color: #000;
+  font-weight: 300;
+}
+
+.another-btn::after,
+.another-btn::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0.1rem;
+  background-color: #dc143c;
+  transition: all 0.3s ease-in-out;
+  margin: 0.5rem 0;
+}
+
+.another-btn:hover::after {
+  width: 100%;
+}
+
+.another-btn:hover::before {
+  width: 100%;
+}
+
+.another-btn:hover a {
+  color: #dc143c;
+}
+.service:hover span i {
+  transition: all 0.3s ease-in-out;
+  transform: rotate(25deg);
+  color: #000;
+}
+@media screen and (min-width: 992px) {
+  .services-content {
+    padding: 0;
+  }
+  .services {
+    flex-direction: row;
+  }
+  .service {
+    width: 24%;
+  }
+  .services-content.cont {
+    width: 95%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .services-content.cont {
+    width: 80%;
+  }
+}
